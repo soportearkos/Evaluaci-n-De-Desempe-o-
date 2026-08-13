@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evaluación del Desempeño</title>
+  <title>Evaluación del Desempeño - Arkos</title>
   <style>
     :root {
       --primary-red: #8B0000;
@@ -123,6 +123,7 @@
       border-color: var(--primary-red);
     }
 
+    /* Tabla de Competencias */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -166,13 +167,15 @@
       border-radius: 6px;
       cursor: pointer;
       box-shadow: 0 4px 6px rgba(139, 0, 0, 0.2);
-      transition: background-color 0.2s;
+      transition: background-color 0.2s, transform 0.1s;
     }
 
     .btn-submit:hover {
       background-color: var(--secondary-red);
+      transform: translateY(-1px);
     }
 
+    /* Estilos para impresión / PDF */
     @media print {
       body {
         background-color: white;
@@ -228,7 +231,7 @@
           </div>
           <div class="form-group">
             <label for="evaluadoCorreo">Correo del Evaluado</label>
-            <input type="email" id="evaluadoCorreo" required placeholder="juan.perez@empresa.com">
+            <input type="email" id="evaluadoCorreo" required placeholder="juan.perez@arkos.com.co">
           </div>
         </div>
 
@@ -247,7 +250,7 @@
           </div>
           <div class="form-group" style="grid-column: span 2;">
             <label for="evaluadorCorreo">Correo del Jefe Directo / Evaluador</label>
-            <input type="email" id="evaluadorCorreo" required placeholder="carlos.rodriguez@empresa.com">
+            <input type="email" id="evaluadorCorreo" required placeholder="carlos.rodriguez@arkos.com.co">
           </div>
         </div>
       </div>
@@ -256,7 +259,7 @@
       <div class="card">
         <h2>2. Evaluación de Competencias</h2>
         <p style="font-size: 13px; margin-bottom: 15px; color: #666;">
-          Califique cada competencia de 1 a 5 (1 = Insuficiente, 3 = Cumple expectativas, 5 = Sobresaliente).
+          Califique cada competencia de 1 a 5 (Donde 1 = Insuficiente, 3 = Cumple expectativas, 5 = Sobresaliente).
         </p>
 
         <table>
@@ -331,6 +334,7 @@
       <!-- 3. COMENTARIOS Y PLAN DE MEJORA -->
       <div class="card">
         <h2>3. Comentarios y Compromisos</h2>
+        
         <div class="form-group">
           <label for="fortalezas">Fortalezas Principales del Evaluado</label>
           <textarea id="fortalezas" rows="3" placeholder="Mencione los aspectos sobresalientes del colaborador..."></textarea>
